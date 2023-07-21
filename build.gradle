@@ -27,9 +27,12 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'org.springframework.boot:spring-boot-starter-mustache'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	implementation'org.springframework.boot:spring-boot-starter-oauth2-client'
+//	implementation'org.springframework.session:spring-session-jdbc'
+//	testImplementation'org.springframework.security:spring-security-test'
 }
 
 tasks.named('test') {
