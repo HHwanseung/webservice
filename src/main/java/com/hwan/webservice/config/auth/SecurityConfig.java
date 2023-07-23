@@ -19,19 +19,17 @@ public class SecurityConfig {
                 .csrf().disable()
                 .headers().frameOptions().disable()
                 .and()
-                .authorizeRequests()
-                .antMatchers("/", "/css/**", "/images/**", "/js/**", "/profile").permitAll()
-                .antMatchers("/api/v1/**").hasRole(Role.USER.name())
-                .anyRequest().authenticated()
+                    .authorizeRequests()
+                    .antMatchers("/", "/css/**", "/images/**", "/js/**", "/profile").permitAll()
+                    .antMatchers("/api/v1/**").hasRole(Role.USER.name())
+                    .anyRequest().authenticated()
                 .and()
-                .logout()
-                .logoutSuccessUrl("/")
+                    .logout()
+                    .logoutSuccessUrl("/")
                 .and()
-                .oauth2Login()
-                .userInfoEndpoint()
-                .userService(customOAuth2UserService)
-                .and()
-                .loginPage("/login");
+                    .oauth2Login()
+                        .userInfoEndpoint()
+                            .userService(customOAuth2UserService);
 
         return http.build();
     }
