@@ -281,7 +281,7 @@ gradle-app.setting
 ### Gradle Patch ###
 # Java heap dump
 *.hprof
-록
+application.properties
 application.yml
 application-oauth.properties
 
