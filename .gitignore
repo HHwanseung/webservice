@@ -281,6 +281,7 @@ gradle-app.setting
 ### Gradle Patch ###
 # Java heap dump
 *.hprof
+application.properties
 application-oauth.properties
 aws.properties
 
