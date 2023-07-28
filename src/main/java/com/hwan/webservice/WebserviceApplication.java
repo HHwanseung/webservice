@@ -6,7 +6,6 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
-@PropertySource("classpath:/aws.properties")
 public class WebserviceApplication {
 
 	public static void main(String[] args) {
