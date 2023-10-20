@@ -1,7 +1,6 @@
 package com.hwan.webservice.domain.user;
 
 import com.hwan.webservice.domain.BaseTimeEntity;
-import com.nimbusds.openid.connect.sdk.claims.Gender;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,8 +29,6 @@ public class User extends BaseTimeEntity {
     @Column(nullable = false)
     private Role role;
 
-    private Gender gender;
-
     @Builder
     public User(String name, String email, String picture, Role role, Gender gender) {
         this.name = name;
@@ -53,3 +50,4 @@ public class User extends BaseTimeEntity {
         return this.role.getKey();
     }
 }
+
