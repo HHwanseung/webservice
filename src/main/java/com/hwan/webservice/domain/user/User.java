@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
+@Builder
 public class User extends BaseTimeEntity {
 
     @Id
@@ -28,6 +29,7 @@ public class User extends BaseTimeEntity {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Role role;
+
 
     @Builder
     public User(String name, String email, String picture, Role role, Gender gender) {
