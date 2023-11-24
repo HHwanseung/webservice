@@ -11,6 +11,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
+@Builder
 public class User extends BaseTimeEntity {
 
     @Id
